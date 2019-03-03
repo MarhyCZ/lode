@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox prefHeight="400.0" prefWidth="640.0" styleClass="mainmenu" stylesheets="@stylesheet.css"
+      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.MainMenuController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <left>
+                <VBox alignment="CENTER" maxWidth="-Infinity" prefWidth="400.0" styleClass="mainmenuPanel"
+                      BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="quickGameButton" mnemonicParsing="false" onAction="#quickGameClick"
+                                text="Rychlá hra"/>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" visible="false"/>
+                        <Button fx:id="editorButton" mnemonicParsing="false" onAction="#editorClick"
+                                text="Editor mapy"/>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" visible="false"/>
+                        <Button fx:id="leaderboardsButton" mnemonicParsing="false" onAction="#leaderboardsClick"
+                                text="Leaderboards"/>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" visible="false"/>
+                        <Button fx:id="helpButton" mnemonicParsing="false" onAction="#helpClick" text="Nápověda"/>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets/>
+                    </BorderPane.margin>
+                    <padding>
+                        <Insets bottom="100.0" top="100.0"/>
+                    </padding>
+                </VBox>
+            </left>
+        </BorderPane>
+    </children>
+</VBox>

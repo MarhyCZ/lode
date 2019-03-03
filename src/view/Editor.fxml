@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox prefHeight="400.0" prefWidth="600.0" styleClass="scene" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditorController">
+
+    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" styleClass="menubar" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+        <children>
+            <Separator prefWidth="10.0" visible="false" />
+            <Button fx:id="toBattlefield" mnemonicParsing="false" onAction="#toBattlefieldClick" text="Spustit hru" />
+            <Separator prefWidth="30.0" visible="false" />
+            <Button fx:id="randomButton" mnemonicParsing="false" onAction="#randomClick" text="Vygenerovat počítačem" />
+            <Separator prefWidth="30.0" visible="false" />
+            <Button fx:id="MenuButton" mnemonicParsing="false" onAction="#menuClick" text="Zpět do menu" />
+        </children>
+        <opaqueInsets>
+            <Insets />
+        </opaqueInsets>
+        <padding>
+            <Insets left="20.0" right="20.0" />
+        </padding>
+        <VBox.margin>
+            <Insets />
+        </VBox.margin>
+    </HBox>
+    <HBox alignment="CENTER">
+        <VBox fx:id="playerBoardPane" alignment="TOP_CENTER" maxHeight="200.0" styleClass="battlefield">
+            <Label alignment="CENTER" contentDisplay="CENTER" styleClass="header_leaderboards" stylesheets="@stylesheet.css" text="TVOJE POLE" textAlignment="CENTER">
+                <VBox.margin>
+                    <Insets bottom="5.0" top="40.0" />
+                </VBox.margin>
+            <font>
+               <Font size="18.0" />
+            </font>
+            </Label>
+        </VBox>
+      <Separator orientation="VERTICAL" prefHeight="200.0" prefWidth="18.0" visible="false" />
+        <VBox fx:id="previewBoardPane" alignment="TOP_CENTER" maxHeight="200.0" styleClass="battlefield">
+            <Label alignment="CENTER" contentDisplay="CENTER" styleClass="header_leaderboards" stylesheets="@stylesheet.css" text="Další loď:" textAlignment="CENTER">
+                <VBox.margin>
+                    <Insets bottom="5.0" left="20.0" top="40.0" />
+                </VBox.margin>
+            <font>
+               <Font size="14.0" />
+            </font>
+            </Label>
+        </VBox>
+    </HBox>
+    <padding>
+        <Insets bottom="20.0" />
+    </padding>
+</VBox>

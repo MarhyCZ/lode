@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane styleClass="scene" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DefeatController">
+   <top>
+        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="58.0" prefWidth="335.0" styleClass="menubar" stylesheets="@stylesheet.css" BorderPane.alignment="CENTER">
+            <children>
+                <Separator prefWidth="10.0" visible="false" />
+                <Button fx:id="editorButton" mnemonicParsing="false" onAction="#editorClick" stylesheets="@stylesheet.css" text="Spustit novou hru">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+                <Separator prefWidth="30.0" visible="false" />
+                <Button fx:id="MenuButton" mnemonicParsing="false" onAction="#menuClick" text="Zpět do menu" />
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <padding>
+                <Insets left="20.0" right="20.0" />
+            </padding>
+        </HBox>
+   </top>
+   <bottom>
+      <ImageView fitHeight="250.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../resources/skull.png" />
+         </image>
+         <BorderPane.margin>
+            <Insets bottom="100.0" />
+         </BorderPane.margin>
+         <effect>
+            <DropShadow color="#ddd1d1" />
+         </effect>
+      </ImageView>
+   </bottom>
+   <center>
+          <Label styleClass="header_leaderboards" stylesheets="@stylesheet.css" text="Bohužel jsi prohrál :/ Ale zkus to znova!" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="40.0" />
+         </BorderPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </center>
+</BorderPane>

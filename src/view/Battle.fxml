@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="scene" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BattleController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="60.0" styleClass="menubar">
+            <children>
+                <Button fx:id="defeatButton" mnemonicParsing="false" onAction="#defeatClick" text="Vzdát se" />
+                <Separator prefWidth="30.0" visible="false" />
+                <Button fx:id="bratButton" mnemonicParsing="false" onAction="#bratClick" text="Neumím prohrávat" />
+                <Separator prefWidth="30.0" visible="false" />
+                <Button fx:id="flashlightButton" mnemonicParsing="false" onAction="#flashlightClick" text="Svítilna" />
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <padding>
+                <Insets left="20.0" right="20.0" />
+            </padding>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="90.0" prefWidth="200.0">
+            <children>
+                <Label styleClass="header_leaderboards" stylesheets="@stylesheet.css" text="POČET TAHŮ: ">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                <Label fx:id="moveCount" styleClass="header_leaderboards" stylesheets="@stylesheet.css" text="0">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            </children>
+        </HBox>
+        <HBox alignment="center" VBox.vgrow="ALWAYS">
+            <children>
+                <VBox fx:id="pcBoardPane" styleClass="battlefield">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" styleClass="header_leaderboards" stylesheets="@stylesheet.css" text="Počítač">
+                            <VBox.margin>
+                                <Insets bottom="5.0" />
+                            </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#b1aeae" />
+                     </effect>
+                        </Label>
+                    </children>
+                </VBox>
+                <Separator orientation="VERTICAL">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Separator>
+                <VBox fx:id="playerBoardPane" styleClass="battlefield">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" styleClass="header_leaderboards" stylesheets="@stylesheet.css" text="Tvoje pole" textAlignment="CENTER">
+                            <VBox.margin>
+                                <Insets bottom="5.0" />
+                            </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#b1aeae" />
+                     </effect>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>
